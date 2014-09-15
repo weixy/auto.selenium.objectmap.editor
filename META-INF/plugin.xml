@@ -26,6 +26,7 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
+      <fileTypeFactory implementation="net.weixy.autotest.selenium.ObjectMapFileTypeFactory"/>
   </extensions>
 
   <application-components>

@@ -1,0 +1,97 @@
+Page.Title=id:page.header.titlebar
+
+Orders.Stages=xpath://div[contains(@id,'page.document')]//p[contains(@class, 'orderStage')]
+
+Orders.Product.Config=id:productConfigure
+Orders.Product.Config.Base=cssselector:div[data-item-name='Base Configuration']
+Orders.Product.Config.Header.BasePrice=id:base_price_display
+Orders.Product.Config.Dialog=id:nodeconfigform
+Orders.Product.Config.Dialog.SortSelect=cssselector:div.addressWidget div.header div.sortBar div.select2-container
+Orders.Product.Config.Dialog.BusinessAddress.Physical=xpath://div[@data-address-type-block='PHYSICAL']
+Orders.Product.Config.Dialog.BusinessAddress.Postal=xpath://div[@data-address-type-block='POSTAL']
+Orders.Product.Config.Dialog.BusinessAddress.Rural=xpath://div[@data-address-type-block='RURAL']
+Orders.Product.Config.Dialog.Save=textequal:Save
+Orders.Product.Config.Dialog.Cancel=textequal:Cancel
+Orders.Product.Config.Base.Category=label:Category$select-search
+Orders.Product.Config.Base.BusinessAddress=label:Business Address
+Orders.Product.Config.Base.NoAddressFound=containtxt:I cannot find my address
+Orders.Product.Config.Base.AddressList=xpath://ul[contains(@class, 'ui-autocomplete') and contains(@style, 'display: block')]
+Orders.Product.Config.Base.BusinessAddress.Dialog.Search=id:id_address_search_bus-address
+Orders.Product.Config.Base.MailingAddress.Dialog.Search=id:id_address_search_mailing-address
+
+Orders.Product.Config.Keywords.SearchInput=cssselector:input.withInlineButton
+Orders.Product.Config.Keywords.ShowAllButton=textequal:Show all
+Orders.Product.Config.BusinessDescription=label:Business Description
+Orders.Product.Component.AddComponents=textequal:Add Components$button
+Orders.Product.Component.AddComponentSection=cssselector:div[class='row'][data-multi-addon-adder-row]
+Orders.Product.Component.AllContainers=containtxt:All Containers$button
+Orders.Product.Component.Add=xpath://button[normalize-space(text()) = 'Add']$button
+Orders.Product.Component.ImageLegend=textequal:Images
+Orders.Product.Actions.Next=id:ic_confirm$button
+Orders.Product.Actions.Cancel=id:ic_cancel$button
+
+Orders.Propose.Customer.BillingAccount=textequal:Billing Account
+
+Orders.Propose.OrderNumber=id:order-detail-panel-number
+Orders.Propose.OrderStatus=id:order-detail-panel-status
+Orders.Propose.OrderLabel=id:order-detail-panel-label
+Orders.Propose.OrderLabel.Input=id:orderLabel
+Orders.Propose.OrderLabel.Save=textequal:Save
+Orders.Propose.OrderPONumber=id:order-detail-panel-po-number
+Orders.Propose.OrderPONumber.Input=id:poNumber
+Orders.Propose.OrderPONumber.Save=textequal:Save
+Orders.Propose.SalePerson.Name=xpath:.//h4[contains(@class, 'customerName')]
+Orders.Propose.AddressList=xpath:.//ul[contains(@class, 'addressList')]
+Orders.Propose.AddressList.Mail=xpath:.//li[contains(@class, 'mail')]
+
+Orders.Propose.Products=cssselector:div.contentBlock[data-product-type='parent']
+Orders.Propose.Product.Tool.Edit=textequal:Edit$button
+Orders.Propose.Product.Tool.Remove=textequal:Remove From Cart$button
+Orders.Propose.Product.SummarySection=cssselector:div.prodSummary
+Orders.Propose.Product.Summary.Briefs=xpath:./div[0]/div
+Orders.Propose.Product.Summary.Billing.ContractTerm=textequal:Contract Term:
+Orders.Propose.Product.Summary.Billing.OrderCustomer=textequal:Ordering Customer:
+Orders.Propose.Product.Summary.Billing.Discounts=textequal:Discounts:
+Orders.Propose.Product.Summary.Billing.PaymentOpt=textequal:Payment Option:
+Orders.Propose.Product.Summary.Billing.Account=textequal:Billing Account:
+Orders.Propose.Product.Summary.Billing.FutureStartDate=textequal:Future Start Date:
+Orders.Propose.Product.Summary.Billing.Cancellation=textequal:Cancellation Reason:
+Orders.Propose.Product.Summary.ArtNotes=textequal:Art notes
+Orders.Propose.Product.Summary.AdminNotes=textequal:Admin notes
+
+Orders.Propose.Product.Addons=cssselector:div.contentBlock[data-product-type='addon']
+Orders.Propose.Product.OrderTotal=cssselector:dl.orderTotal
+
+Orders.Propose.Actions.Duplicate=id:orderdetail-duplicate-tid
+Orders.Propose.Actions.DeleteOrder=id:orderdetail-cancelorder-tid
+Orders.Propose.Actions.Save=id:orderdetail-save-tid
+Orders.Propose.Actions.Propose=id:orderdetail-propose-tid
+
+Orders.Accept.OrderAcceptanceType=id:order-detail-panel-acceptance-type
+Orders.Accept.OrderLabel=id:order-detail-panel-label
+Orders.Accept.OrderPONumber=id:order-detail-panel-po-number
+Orders.Accept.OrderPONumber.Input=id:poNumber
+Orders.Accept.OrderPONumber.Save=textequal:Save
+Orders.Accept.Proposal.Link=textequal:Proposal
+Orders.Accept.Proposal.AcceptanceType=xpath:.//form/div[contains(@class, 'select2-container')]/input[contains(@class,'select2-focusser')]$select
+Orders.Accept.Proposal.BrowseFileButton=xpath:.//input[@type='file']$button
+Orders.Accept.Proposal.AcceptButton=textequal:Accept$button
+Orders.Accept.Actions.EditOrder=id:orderdetail-change-to-draft-tid
+
+Orders.Checkout.CheckoutSummaryPrice=cssselector:dl.checkoutSummaryPrice
+Orders.Checkout.SubmitButton=id:nav-order.checkout-notify-typepaymentpostpayment-tid
+Orders.Checkout.CancelButton=textequal:Cancel
+
+Orders.Complete.OrderPrice=cssselector:div.orderTotalPrice
+Orders.Complete.OrderGrandTotal=containtxt:Grand Total
+Orders.Complete.ViewCustomer=id:return-to-customer-tid
+Orders.Complete.ViewOrder=id:view-new-order-tid
+Orders.Complete.CancelOrder=id:orderdetail-cancelorder-tid
+
+Orders.Complete.ConfirmDialog=id:confirmation_popup
+Orders.Complete.ConfirmDialog.Yes=textequal:Yes
+
+Orders.Details.Tab=xpath://div[contains(@id,'page.document')]/div[contains(@class, 'tabContainer')]
+Orders.Details.ThisSection=textequal:This Section
+Orders.Details.CheckedItems=textequal:Checked Items
+Orders.Details.AllItems=textequal:All Items
