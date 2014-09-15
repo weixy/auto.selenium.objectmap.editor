@@ -8,5 +8,5 @@ import javax.swing.*;
  * Created by Jim Wei on 15/09/14.
  */
 public class ObjectMapIcons {
-    public static final Icon FILE = IconLoader.getIcon("/net/weixy/autotest/selenium/icon-target.png");
+    public static final Icon FILE = IconLoader.getIcon("/net/weixy/autotest/selenium/icon-target3.png");
 }
