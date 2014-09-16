@@ -14,7 +14,7 @@
         XPATH="xpath"
         CSS="cssselector"
         TXT="textequal"
-        CONTAIN="containtext"
+        CONTAIN="containtxt"
         LABEL="label"
 
         comment='regexp:^#.*'
