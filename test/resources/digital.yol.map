@@ -1,0 +1,19 @@
+#Start page=23424
+nav.bar=id:navbar
+nav.yellow.sites=id:yellowSites
+nav.yellow.tools=id:yellowNavTools
+nav.yellow.loginForm=id:loginForm
+nav.yellow.loginForm.email=cssselector:input[type='email']
+nav.yellow.loginForm.password=cssselector:input[type='password']
+nav.yellow.loginForm.login=cssselector:button.loginbutton_forsavesearchfunction
+
+search.what.field=id:searchWhatField
+search.where.field=id:searchWhereField
+search.find.button=cssselector:div#searchButton button
+search.popular.categories=id:popularCategories
+search.trending=id:trendingSearches
+search.footer.links=cssselector:section#footerLinkBlocks
+
+#Search result page
+result.item.list=id:searchResultsList
+result.item.abc=abc://abc::child/*[@id='myid']

@@ -1,0 +1,7 @@
+<map> ::= [ <COMMENT> ] <object>
+<COMMENT> ::= 'regexp:^#.*'
+<object> ::= <property> '=' <by> <expression>
+<property> ::= 'regexp:^\w+(\.\w+)*(?=\=)'
+<by> ::= id | xpath | cssselector | textequal | containtext | label
+<expression> ::= ':' <value>
+<value> ::= 'regexp:.*'
