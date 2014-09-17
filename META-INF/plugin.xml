@@ -27,6 +27,7 @@
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
       <fileTypeFactory implementation="net.weixy.autotest.selenium.ObjectMapFileTypeFactory"/>
+      <lang.parserDefinition language="ObjectMap" implementationClass="net.weixy.autotest.selenium.ObjectMapParserDefinition"/>
   </extensions>
 
   <application-components>

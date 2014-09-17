@@ -14,7 +14,7 @@ public class ObjectMapFileType extends LanguageFileType {
     public static final ObjectMapFileType INSTANCE = new ObjectMapFileType();
 
     private ObjectMapFileType() {
-        super(ObjectMap.INSTANCE);
+        super(ObjectMapLanguage.INSTANCE);
     }
 
     @NotNull

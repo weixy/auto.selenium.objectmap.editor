@@ -5,9 +5,9 @@
     psiImplClassSuffix="Impl"
     psiPackage="net.weixy.autotest.selenium.psi"
     psiImplPackage="net.weixy.autotest.selenium.psi.impl"
-    elementTypeHolderClass="net.weixy.autotest.selenium.psi.ObjectMaps"
-    elementTypeClass="net.weixy.autotest.selenium.psi.ObjectMapElementType"
-    tokenTypeClass="net.weixy.autotest.selenium.psi.ObjectMapTokenType"
+    elementTypeHolderClass="net.weixy.autotest.selenium.psi.ObjectMapTypes"
+    elementTypeClass="net.weixy.autotest.selenium.ObjectMapElementType"
+    tokenTypeClass="net.weixy.autotest.selenium.ObjectMapTokenType"
 
     tokens=[
         ID="id"
@@ -16,7 +16,9 @@
         TXT="textequal"
         CONTAIN="containtxt"
         LABEL="label"
+        NEW_LINE="\n\r|\r|\n"
 
+        separator='='
         comment='regexp:^#.*'
         property='regexp:^\w+(\.\w+)*(?=\=)'
         expression='regexp:(?:):(.*)'
@@ -24,5 +26,5 @@
     ]
 }
 map ::= ( object | comment ) *
-object ::= property '=' by expression
+object ::= property separator by expression
 by ::= ID | XPATH | CSS | TXT | CONTAIN | LABEL
