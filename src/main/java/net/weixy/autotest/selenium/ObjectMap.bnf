@@ -10,14 +10,9 @@
     tokenTypeClass="net.weixy.autotest.selenium.ObjectMapTokenType"
 
     tokens=[
-        ID="id"
-        XPATH="xpath"
-        CSS="cssselector"
-        TXT="textequal"
-        CONTAIN="containtxt"
-        LABEL="label"
-        NEW_LINE="\n\r|\r|\n"
 
+        NEW_LINE="\n\r|\r|\n"
+        by='regexp:(id|xpath|cssselector|textequal|containtxt|label)'
         separator='='
         comment='regexp:^#.*'
         property='regexp:^\w+(\.\w+)*(?=\=)'
@@ -27,4 +22,3 @@
 }
 map ::= ( object | comment ) *
 object ::= property separator by expression
-by ::= ID | XPATH | CSS | TXT | CONTAIN | LABEL
