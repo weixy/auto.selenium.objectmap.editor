@@ -18,22 +18,24 @@ import net.weixy.autotest.selenium.psi.ObjectMapTypes;
 CRLF=\n|\r|\r\n
 WHITE_SPACE=[\ \t\f]
 COMMENT="#".*
-PROPERTY=\w+(\.\w+)*(\?=\=)
+PROPERTY=[a-z0-9A-Z]+("."[a-z0-9A-Z]+)*
 SEPARATOR="="
 BY= "id" | "xpath" | "cssselector" | "textequal" | "containtxt" | "label"
-EXPRESSION=(\?:):(.*)
+EXPRESSION=":".*
 
-%state WAITING_VALUE
+%state PARSE_OBJECT
 
 %%
 
     <YYINITIAL> {COMMENT}           { System.out.println("COMMENT " + yytext()); yybegin(YYINITIAL); return ObjectMapTypes.COMMENT; }
-    <YYINITIAL> {PROPERTY}          { System.out.println("PROPERTY " + yytext()); yybegin(YYINITIAL); return ObjectMapTypes.PROPERTY; }
-    <YYINITIAL> {SEPARATOR}         { System.out.println("SEPARATOR " + yytext()); yybegin(YYINITIAL); return ObjectMapTypes.SEPARATOR; }
-    <YYINITIAL> {BY}                { System.out.println("BY " + yytext()); yybegin(YYINITIAL); return ObjectMapTypes.BY; }
-    //<YYINITIAL> {EXPRESSION}        { System.out.println("EXPRESSION " + yytext()); yybegin(YYINITIAL); return ObjectMapTypes.EXPRESSION; }
-    <WAITING_VALUE> {CRLF}          { System.out.println("CRLF"); yybegin(YYINITIAL); /* do nothing */}
-    <WAITING_VALUE> {WHITE_SPACE}+  { System.out.println("WHITE_SPACE"); yybegin(WAITING_VALUE); return TokenType.WHITE_SPACE; }
+    <YYINITIAL>    {PROPERTY}      { System.out.println("PROPERTY " + yytext()); yybegin(PARSE_OBJECT); return ObjectMapTypes.PROPERTY; }
+    <PARSE_OBJECT> {
+        {SEPARATOR}         { System.out.println("SEPARATOR " + yytext()); yybegin(PARSE_OBJECT); return ObjectMapTypes.SEPARATOR; }
+        {BY}                { System.out.println("BY " + yytext()); yybegin(PARSE_OBJECT); return ObjectMapTypes.BY; }
+        {EXPRESSION}        { System.out.println("EXPRESSION " + yytext()); yybegin(PARSE_OBJECT); return ObjectMapTypes.EXPRESSION; }
+        {CRLF}          { System.out.println("CRLF"); yybegin(YYINITIAL); /* do nothing */}
+        {WHITE_SPACE}+  { System.out.println("WHITE_SPACE"); yybegin(PARSE_OBJECT); return TokenType.WHITE_SPACE; }
+    }
     {CRLF}          { System.out.println("CRLF"); yybegin(YYINITIAL); /* do nothing */}
     {WHITE_SPACE}+  { System.out.println("WHITE_SPACE"); yybegin(YYINITIAL); return TokenType.WHITE_SPACE; }
     .               { return TokenType.BAD_CHARACTER; }
