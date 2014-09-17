@@ -22,7 +22,7 @@ import static com.intellij.openapi.editor.colors.TextAttributesKey.createTextAtt
  */
 public class ObjectMapSyntaxHighlighter extends SyntaxHighlighterBase {
     public static final TextAttributesKey COMMENT = createTextAttributesKey("OBJMAP_COMMENT", DefaultLanguageHighlighterColors.LINE_COMMENT);
-    public static final TextAttributesKey PROPERTY = createTextAttributesKey("OBJMAP_PROPERTY", DefaultLanguageHighlighterColors.LABEL);
+    public static final TextAttributesKey PROPERTY = createTextAttributesKey("OBJMAP_PROPERTY", DefaultLanguageHighlighterColors.CONSTANT);
     public static final TextAttributesKey SEPARATOR = createTextAttributesKey("OBJMAP_SEPARATOR", DefaultLanguageHighlighterColors.GLOBAL_VARIABLE);
     public static final TextAttributesKey BY = createTextAttributesKey("OBJMAP_BY", DefaultLanguageHighlighterColors.KEYWORD);
     public static final TextAttributesKey EXPRESSION = createTextAttributesKey("OBJMAP_EXPRESSION", DefaultLanguageHighlighterColors.STRING);
