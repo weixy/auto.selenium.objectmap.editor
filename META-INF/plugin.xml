@@ -43,7 +43,7 @@
     <!-- Add your actions here -->
       <action id="generate-hooks" class="net.weixy.autotest.selenium.ObjectMapGenerateHooksAction"
               text="Generate hooks...">
-          <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="EditorPopupMenu1"/>
+          <add-to-group group-id="EditorPopupMenu" anchor="last" />
           <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G"/>
       </action>
   </actions>
