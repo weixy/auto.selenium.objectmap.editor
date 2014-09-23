@@ -12,7 +12,6 @@ import net.weixy.autotest.selenium.psi.ObjectMapTypes;
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
-import java.awt.font.TextAttribute;
 import java.io.Reader;
 
 import static com.intellij.openapi.editor.colors.TextAttributesKey.createTextAttributesKey;

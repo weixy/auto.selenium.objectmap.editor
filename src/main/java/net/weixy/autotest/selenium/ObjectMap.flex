@@ -17,7 +17,7 @@ import net.weixy.autotest.selenium.psi.ObjectMapTypes;
 
 CRLF=\n|\r|\r\n
 WHITE_SPACE=[\ \t\f]
-COMMENT="#".*
+COMMENT="#".*(\n|\r|\r\n)
 PROPERTY=[a-z0-9A-Z]+("."[a-z0-9A-Z]+)*
 SEPARATOR="="
 BY= "id" | "xpath" | "cssselector" | "textequal" | "containtxt" | "label"
@@ -33,10 +33,10 @@ EXPRESSION=":".*
         {SEPARATOR}         { System.out.println("SEPARATOR " + yytext()); yybegin(PARSE_OBJECT); return ObjectMapTypes.SEPARATOR; }
         {BY}                { System.out.println("BY " + yytext()); yybegin(PARSE_OBJECT); return ObjectMapTypes.BY; }
         {EXPRESSION}        { System.out.println("EXPRESSION " + yytext()); yybegin(PARSE_OBJECT); return ObjectMapTypes.EXPRESSION; }
-        {CRLF}          { System.out.println("CRLF"); yybegin(YYINITIAL); /* do nothing */}
+        {CRLF}          { System.out.println("CRLF"); yybegin(YYINITIAL); return ObjectMapTypes.CRLF; }
         {WHITE_SPACE}+  { System.out.println("WHITE_SPACE"); yybegin(PARSE_OBJECT); return TokenType.WHITE_SPACE; }
     }
-    {CRLF}          { System.out.println("CRLF"); yybegin(YYINITIAL); /* do nothing */}
+    <YYINITIAL> {CRLF}          { System.out.println("CRLF"); yybegin(YYINITIAL); return ObjectMapTypes.CRLF; }
     {WHITE_SPACE}+  { System.out.println("WHITE_SPACE"); yybegin(YYINITIAL); return TokenType.WHITE_SPACE; }
     .               { return TokenType.BAD_CHARACTER; }
 

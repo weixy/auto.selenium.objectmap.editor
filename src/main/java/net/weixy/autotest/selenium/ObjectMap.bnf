@@ -11,7 +11,7 @@
 
     tokens=[
 
-        NEW_LINE="\n\r|\r|\n"
+        CRLF='regexp:(\n\r|\r|\n)'
         by='regexp:(id|xpath|cssselector|textequal|containtxt|label)'
         separator='='
         comment='regexp:^#.*'
@@ -20,5 +20,5 @@
 
     ]
 }
-map ::= ( object | comment ) *
+map ::= ( object | comment | CRLF) *
 object ::= property separator by expression
