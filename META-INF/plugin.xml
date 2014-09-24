@@ -26,9 +26,9 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
-      <fileTypeFactory implementation="net.weixy.autotest.selenium.ObjectMapFileTypeFactory"/>
-      <lang.parserDefinition language="ObjectMap" implementationClass="net.weixy.autotest.selenium.ObjectMapParserDefinition"/>
-      <lang.syntaxHighlighterFactory key="ObjectMap" implementationClass="net.weixy.autotest.selenium.ObjectMapSyntaxHighlighterFactory"/>
+      <fileTypeFactory implementation="net.weixy.autotest.selenium.language.ObjectMapFileTypeFactory"/>
+      <lang.parserDefinition language="ObjectMap" implementationClass="net.weixy.autotest.selenium.parser.ObjectMapParserDefinition"/>
+      <lang.syntaxHighlighterFactory key="ObjectMap" implementationClass="net.weixy.autotest.selenium.parser.ObjectMapSyntaxHighlighterFactory"/>
   </extensions>
 
   <application-components>
@@ -41,8 +41,8 @@
 
   <actions>
     <!-- Add your actions here -->
-      <action id="generate-hooks" class="net.weixy.autotest.selenium.ObjectMapGenerateHooksAction"
-              text="Generate hooks..." icon="icon-target2.png">
+      <action id="generate-hooks" class="net.weixy.autotest.selenium.actions.ObjectMapGenerateHooksAction"
+              text="Generate hooks..." icon="/net/weixy/autotest/selenium/icon-target2.png">
           <add-to-group group-id="EditorPopupMenu" anchor="last" />
           <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt G"/>
       </action>

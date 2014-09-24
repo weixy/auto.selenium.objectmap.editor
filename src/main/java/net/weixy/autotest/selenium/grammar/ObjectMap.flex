@@ -1,4 +1,4 @@
-package net.weixy.autotest.selenium;
+package net.weixy.autotest.selenium.grammar;
 
 import com.intellij.lexer.FlexLexer;
 import com.intellij.psi.TokenType;
@@ -6,7 +6,7 @@ import com.intellij.psi.tree.IElementType;
 import net.weixy.autotest.selenium.psi.ObjectMapTypes;
 
 %%
-
+%public
 %class ObjectMapLexer
 %implements FlexLexer
 %unicode

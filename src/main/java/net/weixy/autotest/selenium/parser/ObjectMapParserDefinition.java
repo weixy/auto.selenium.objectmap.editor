@@ -1,4 +1,4 @@
-package net.weixy.autotest.selenium;
+package net.weixy.autotest.selenium.parser;
 
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.Language;
@@ -13,6 +13,9 @@ import com.intellij.psi.PsiFile;
 import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.IFileElementType;
 import com.intellij.psi.tree.TokenSet;
+import net.weixy.autotest.selenium.ObjectMapParser;
+import net.weixy.autotest.selenium.grammar.ObjectMapLexer;
+import net.weixy.autotest.selenium.language.ObjectMapLanguage;
 import net.weixy.autotest.selenium.psi.ObjectMapFile;
 import net.weixy.autotest.selenium.psi.ObjectMapTypes;
 import org.jetbrains.annotations.NotNull;

@@ -1,4 +1,4 @@
-package net.weixy.autotest.selenium;
+package net.weixy.autotest.selenium.parser;
 
 import com.intellij.openapi.fileTypes.SyntaxHighlighter;
 import com.intellij.openapi.fileTypes.SyntaxHighlighterFactory;

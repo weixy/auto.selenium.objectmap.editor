@@ -1,4 +1,4 @@
-package net.weixy.autotest.selenium;
+package net.weixy.autotest.selenium.language;
 
 import com.intellij.openapi.fileTypes.LanguageFileType;
 import org.jetbrains.annotations.NotNull;

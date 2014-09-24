@@ -1,4 +1,4 @@
-package net.weixy.autotest.selenium;
+package net.weixy.autotest.selenium.language;
 
 import com.intellij.openapi.fileTypes.FileTypeConsumer;
 import com.intellij.openapi.fileTypes.FileTypeFactory;

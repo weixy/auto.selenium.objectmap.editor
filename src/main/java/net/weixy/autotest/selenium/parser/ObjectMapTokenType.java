@@ -1,6 +1,7 @@
-package net.weixy.autotest.selenium;
+package net.weixy.autotest.selenium.parser;
 
 import com.intellij.psi.tree.IElementType;
+import net.weixy.autotest.selenium.language.ObjectMapLanguage;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 

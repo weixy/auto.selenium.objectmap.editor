@@ -1,4 +1,4 @@
-package net.weixy.autotest.selenium;
+package net.weixy.autotest.selenium.language;
 
 import com.intellij.lang.Language;
 

@@ -1,4 +1,4 @@
-package net.weixy.autotest.selenium;
+package net.weixy.autotest.selenium.parser;
 
 import com.intellij.lexer.FlexAdapter;
 import com.intellij.lexer.Lexer;
@@ -8,6 +8,7 @@ import com.intellij.openapi.editor.markup.TextAttributes;
 import com.intellij.openapi.fileTypes.SyntaxHighlighterBase;
 import com.intellij.psi.TokenType;
 import com.intellij.psi.tree.IElementType;
+import net.weixy.autotest.selenium.grammar.ObjectMapLexer;
 import net.weixy.autotest.selenium.psi.ObjectMapTypes;
 import org.jetbrains.annotations.NotNull;
 

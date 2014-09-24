@@ -3,8 +3,8 @@ package net.weixy.autotest.selenium.psi;
 import com.intellij.extapi.psi.PsiFileBase;
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.psi.FileViewProvider;
-import net.weixy.autotest.selenium.ObjectMapLanguage;
-import net.weixy.autotest.selenium.ObjectMapFileType;
+import net.weixy.autotest.selenium.language.ObjectMapLanguage;
+import net.weixy.autotest.selenium.language.ObjectMapFileType;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;

@@ -6,8 +6,8 @@
     psiPackage="net.weixy.autotest.selenium.psi"
     psiImplPackage="net.weixy.autotest.selenium.psi.impl"
     elementTypeHolderClass="net.weixy.autotest.selenium.psi.ObjectMapTypes"
-    elementTypeClass="net.weixy.autotest.selenium.ObjectMapElementType"
-    tokenTypeClass="net.weixy.autotest.selenium.ObjectMapTokenType"
+    elementTypeClass="net.weixy.autotest.selenium.parser.ObjectMapElementType"
+    tokenTypeClass="net.weixy.autotest.selenium.parser.ObjectMapTokenType"
 
     tokens=[
 
